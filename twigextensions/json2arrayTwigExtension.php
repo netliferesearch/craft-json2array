@@ -23,8 +23,8 @@ class json2arrayTwigExtension extends \Twig_Extension
     {
         $jsonArray = array();
 
-        $jsonArray = json_decode($json);
+        $jsonArray = json_decode($json, true);
 
-        return json_decode(json_encode($jsonArray), true);;
+        return $jsonArray;
     }
 }
