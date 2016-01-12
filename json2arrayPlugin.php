@@ -2,11 +2,11 @@
 /*
   Twig extension that takes a json-string (e.g. from {{set json = include('foobar.json')}}) and converts it to an array.
 
-  
+
 
 */
 namespace Craft;
-require_once 'vendor/autoload.php';
+
 
 class json2arrayPlugin extends BasePlugin
 {
@@ -15,7 +15,7 @@ class json2arrayPlugin extends BasePlugin
   }
   function getName()
   {
-    return Craft::t('json2array Plugin');
+    return Craft::t('json2array plugin');
   }
   public function hasCpSection()
   {
@@ -38,8 +38,8 @@ class json2arrayPlugin extends BasePlugin
   }
   public function addTwigExtension()
   {
-    Craft::import('plugins.json2apiapi.twigextensions.json2apiapiTwigExtension');
-    return new json2apiapiTwigExtension();
+    Craft::import('plugins.json2array.twigextensions.json2arrayTwigExtension');
+    return new json2arrayTwigExtension();
   }
   /*
     function getSettingsUrl()

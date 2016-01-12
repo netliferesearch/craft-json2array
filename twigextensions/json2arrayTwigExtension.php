@@ -4,22 +4,22 @@ namespace Craft;
 use Twig_Extension;
 use Twig_Filter_Method;
 
-class enivestapiTwigExtension extends \Twig_Extension
+class json2arrayTwigExtension extends \Twig_Extension
 {
 
     public function getName()
     {
-        return 'json2api';
+        return 'json2array';
     }
 
     public function getFilters()
     {
         return array(
-            'json2api' => new Twig_Filter_Method($this, 'json2api'),
+            'json2array' => new Twig_Filter_Method($this, 'json2array'),
         );
     }
 
-    public function json2api($json)
+    public function json2array($json)
     {
         $jsonArray = array();
 
